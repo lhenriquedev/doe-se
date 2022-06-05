@@ -1,0 +1,451 @@
+<!DOCTYPE html>
+<html lang="pt-BR" class="scroll-smooth">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Aqui vai um titulo para página</title>
+
+    <!-- CDN Tailwind -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <!-- ionic icons -->
+    <script
+      defer
+      type="module"
+      src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.esm.js"
+    ></script>
+    <script
+      defer
+      nomodule
+      src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.js"
+    ></script>
+
+    <style>
+      .hidden-box {
+        grid-column: 2;
+        display: none;
+      }
+
+      .open {
+        border-top: 4px solid #fddd00;
+      }
+      .open .hidden-box {
+        display: block;
+      }
+    </style>
+  </head>
+  <body>
+    <header id="header" class="w-full h-20 bg-[#fddd00]">
+      <nav class="h-full border-gray-200 px-2 sm:px-4 py-2.5 bg-[#fddd00]">
+        <div
+          class="w-full h-full items-center max-w-7xl px-8 flex flex-wrap justify-between items-center mx-auto"
+        >
+          <a href="#" class="flex items-center">
+            <span class="self-center text-[#1877b1] text-3xl font-bold whitespace-nowrap"
+              >Senac RS</span
+            >
+          </a>
+          <div class="flex md:order-2">
+            <a
+              href="#faq"
+              class="hidden lg:block text-white bg-[#016908] hover:bg-blue-800 focus:ring-4 focus:outline-none focus:ring-blue-300 font-medium rounded-full text-sm px-4 py-2 w-[150px] text-center mr-3 md:mr-0"
+            >
+              Quero doar
+            </a>
+            <button
+              data-collapse-toggle="mobile-menu-4"
+              type="button"
+              class="inline-flex items-center p-2 text-sm text-gray-500 rounded-lg md:hidden hover:bg-gray-100 focus:outline-none focus:ring-2 focus:ring-gray-200 dark:text-gray-400 dark:hover:bg-gray-700 dark:focus:ring-gray-600"
+              aria-controls="mobile-menu-4"
+              aria-expanded="false"
+            >
+              <span class="sr-only">Open main menu</span>
+              <svg
+                class="w-6 h-6"
+                fill="currentColor"
+                viewBox="0 0 20 20"
+                xmlns="http://www.w3.org/2000/svg"
+              >
+                <path
+                  fill-rule="evenodd"
+                  d="M3 5a1 1 0 011-1h12a1 1 0 110 2H4a1 1 0 01-1-1zM3 10a1 1 0 011-1h12a1 1 0 110 2H4a1 1 0 01-1-1zM3 15a1 1 0 011-1h12a1 1 0 110 2H4a1 1 0 01-1-1z"
+                  clip-rule="evenodd"
+                ></path>
+              </svg>
+              <svg
+                class="hidden w-6 h-6"
+                fill="currentColor"
+                viewBox="0 0 20 20"
+                xmlns="http://www.w3.org/2000/svg"
+              >
+                <path
+                  fill-rule="evenodd"
+                  d="M4.293 4.293a1 1 0 011.414 0L10 8.586l4.293-4.293a1 1 0 111.414 1.414L11.414 10l4.293 4.293a1 1 0 01-1.414 1.414L10 11.414l-4.293 4.293a1 1 0 01-1.414-1.414L8.586 10 4.293 5.707a1 1 0 010-1.414z"
+                  clip-rule="evenodd"
+                ></path>
+              </svg>
+            </button>
+          </div>
+          <div
+            class="hidden justify-between items-center w-full md:flex md:w-auto md:order-1"
+            id="mobile-menu-4"
+          >
+            <ul
+              class="flex flex-col mt-4 md:flex-row md:space-x-8 md:mt-0 md:text-sm md:font-medium"
+            >
+              <li>
+                <a
+                  href="#partners"
+                  class="block py-2 pr-4 pl-3 lg:text-xl text-[#1877b1] bg-blue-700 rounded md:bg-transparent md:text-[#1877b1] md:p-0"
+                  aria-current="page"
+                  >Parceiros</a
+                >
+              </li>
+              <li>
+                <a
+                  href="#points"
+                  class="block py-2 pr-4 pl-3 lg:text-xl text-[#1877b1] bg-blue-700 rounded md:bg-transparent md:text-[#1877b1] md:p-0"
+                  >Onde doar</a
+                >
+              </li>
+              <li>
+                <a
+                  href="#about"
+                  class="block py-2 pr-4 pl-3 lg:text-xl text-[#1877b1] bg-blue-700 rounded md:bg-transparent md:text-[#1877b1] md:p-0"
+                  >Sobre</a
+                >
+              </li>
+              <li>
+                <a
+                  href="#faq"
+                  class="block py-2 pr-4 pl-3 lg:text-xl text-[#1877b1] bg-blue-700 rounded md:bg-transparent md:text-[#1877b1] md:p-0"
+                  >FAQ</a
+                >
+              </li>
+              <li>
+                <a
+                  href="#contact"
+                  class="block py-2 pr-4 pl-3 lg:text-xl md:text-[#1877b1] bg-blue-700 rounded md:bg-transparent md:text-[#1877b1] md:p-0"
+                  >Contato</a
+                >
+              </li>
+            </ul>
+          </div>
+        </div>
+      </nav>
+      <!-- <div class="flex w-full h-full items-center max-w-7xl px-8 mx-auto justify-between py-5">
+        <h2 class="text-3xl text-white text-[#1877b1] font-bold">Senac POA</h2>
+
+        <nav>
+          <ul class="flex list-none gap-12">
+            <li class="uppercase font-bold">
+              <a class="text-[#26a43c] text-base" href="#about">Sobre</a>
+            </li>
+            <li class="text-white uppercase font-bold">
+              <a class="text-[#26a43c] text-base" href="#partners">Parceiros</a>
+            </li>
+            <li class="text-white uppercase font-bold">
+              <a class="text-[#26a43c] text-base" href="#faq">FAQ</a>
+            </li>
+          </ul>
+        </nav>
+      </div> -->
+    </header>
+
+    <main>
+      <section id="hero" class="w-full h-[1100px] lg:h-[700px] bg-[#fddd00]">
+        <div
+          class="flex flex-col gap-24 items-center justify-between lg:flex-row pt-20 max-w-7xl px-8 mx-auto"
+        >
+          <div class="flex flex-col">
+            <span class="self-start inline-block p-2 bg-[#1877b1] text-white font-bold rounded mb-4"
+              >Campanha solidária</span
+            >
+            <h1 class="text-5xl lg:text-7xl font-bold uppercase text-[#003b9e] leading-tight mb-4">
+              Doar <span class="text-[#001952]">faz</span> bem!
+            </h1>
+            <p class="text-lg text-[#444444] font-medium mb-8 text-justify">
+              Este projeto nasceu junto a proposta da disciplina Gestão Ágil de Projetos da
+              Faculdade Senac RS, um projeto que vai além da sala de aula onde estamos arrecadando
+              alimentos para instituição “Clinica Esperança de Amparo a Criança.
+            </p>
+
+            <a
+              class="py-2 bg-[#016908] w-[200px] rounded-3xl text-center text-white text-lg font-bold hover:bg-[#348739] ease-in-out duration-300"
+              href="#FAQ"
+              >Saiba mais</a
+            >
+          </div>
+          <div class="w-full">
+            <img class="max-w-full" src="assets/images/hero-removebg.png" alt="" />
+          </div>
+        </div>
+      </section>
+
+      <section id="partners" class="w-full pt-20 pb-20 border-b-[1px]">
+        <div class="px-8 mx-auto max-w-7xl">
+          <span class="subheadline text-base text-[#809fcb] font-bold uppercase"
+            >Parceiros &mdash;</span
+          >
+          <h2 class="title text-3xl font-bold text-[#003f97] mb-8">
+            Temos uma parceria incrível com esses times:
+          </h2>
+          <div class="overflow-hidden grid grid-cols-2 gap-10 md:grid-cols-3 lg:grid-cols-4 mt-20">
+            <img
+              class="h-[30px] lg:h-[40px] brightness-0 opacity-50 place-self-center"
+              src="assets/images/business-insider.png"
+              alt="Ceacri "
+            />
+            <img
+              class="h-[30px] lg:h-[40px] brightness-0 opacity-50 place-self-center"
+              src="assets/images/forbes.png"
+              alt="Forbes logo"
+            />
+            <img
+              class="h-[30px] lg:h-[40px] brightness-0 opacity-50 place-self-center"
+              src="assets/images/the-new-york-times.png"
+              alt="The new yor times logo"
+            />
+            <img
+              class="h-[30px] lg:h-[40px] brightness-0 opacity-50 place-self-center"
+              src="assets/images/techcrunch.png"
+              alt="Techcrunch logo"
+            />
+          </div>
+        </div>
+      </section>
+
+      <section id="about" class="w-full p-24 border-b-[1px]">
+        <div class="px-8 mx-auto max-w-7xl">
+          <span class="text-base text-[#809fcb] font-bold uppercase">Sobre &mdash;</span>
+          <h2 id="title" class="text-3xl font-bold text-[#003f97] mb-8">
+            Somos uma equipe com pessoas talentosas
+          </h2>
+          <div class="flex lg:flex-row flex-col lg:gap-24 sm:gap-10 gap-12">
+            <div class="w-full lg:w-6/12">
+              <p class="text-base lg:text-xl text-[#444] text-justify">
+                Este projeto nasceu junto a proposta da disciplina Gestão Ágil de Projetos da
+                Faculdade Senac RS, um projeto que vai além da sala de aula onde estamos arrecadando
+                alimentos para instituição “Clinica Esperança de Amparo a Criança.
+              </p>
+            </div>
+            <div class="w-full lg:w-6/12">
+              <img
+                class="lg:block hidden w-full"
+                src="https://i.ibb.co/RjNH7QB/Rectangle-122-1.png"
+                alt="people discussing on board"
+              />
+              <img
+                class="lg:hidden sm:block hidden w-full"
+                src="https://i.ibb.co/16fPqrg/Rectangle-122-2.png"
+                alt="people discussing on board"
+              />
+              <img
+                class="sm:hidden block w-full"
+                src="https://i.ibb.co/Jxhpxh6/Rectangle-122.png"
+                alt="people discussing on board"
+              />
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section id="forWhom" class="p-32 bg-[#fddd00]">
+        <div class="px-8 mx-auto max-w-7xl">
+          <span class="text-base text-[#809fcb] font-bold uppercase">Para quem &mdash;</span>
+          <h2 id="title" class="text-3xl font-bold text-[#003f97] mb-8">Quem receberá a doação?</h2>
+
+          <div class="flex flex-col gap-[48px] lg:flex-row justify-between items-center">
+            <div class="max-w-[600px]">
+              <p class="text-base lg:text-xl text-[#444] text-justify">
+                A
+                <span class="text-[#003f97] font-bold"
+                  >CEACRI Clínica Esperança de Amparo à Criança</span
+                >
+                é uma organização não governamental, sem fins lucrativos que acolhe crianças e
+                adolescentes encaminhados pelo Juizado da Infância e da Juventude. <br />
+                <br />A organização foi fundada em 1 de Maio de 1997 pela missionária da Suécia Mary
+                Taranger e tem como missão "oferecer cuidado, amor proteção, educação, assistência à
+                saúde e lazer para as crianças e adolescentes em situação de vulnerabilidade
+                social".
+              </p>
+            </div>
+            <img class="lg:w-[30%] w-[80%] mb-8" src="assets/images/ceacri.png" alt="" />
+          </div>
+        </div>
+      </section>
+
+      <section id="points" class="w-full p-32 border-b-[1px]">
+        <div class="px-8 mx-auto max-w-7xl">
+          <span class="text-base text-[#809fcb] font-bold uppercase">Onde doar &mdash;</span>
+          <h2 id="title" class="text-3xl font-bold text-[#003f97] mb-8">Pontos de coleta</h2>
+
+          <div class="flex flex-col lg:flex-row justify-between">
+            <div class="lg:max-w-[600px]">
+              <div class="mb-8">
+                <h3 class="flex items-center gap-[16px] font-bold text-[#003f97] text-xl mb-4">
+                  <ion-icon class="w-[30px] h-[30px]" name="navigate-outline"></ion-icon>
+                  <span
+                    >Faculdade Senac Porto Alegre (Campus I) - <br />
+                    Coordenação de TI</span
+                  >
+                </h3>
+                <span class="text-lg">
+                  R. Cel. Genuíno, 130 - Centro Histórico - Porto Alegre
+                </span>
+              </div>
+
+              <div class="mb-10">
+                <h3 class="flex items-center gap-[16px] font-bold text-[#003f97] text-xl mb-4">
+                  <ion-icon class="w-[30px] h-[30px]" name="navigate-outline"></ion-icon>
+                  <span>Zensul Porto Alegre</span>
+                </h3>
+                <span class="text-lg">
+                  R. Dr Salvador França, 855 - Jardim Botânico - Porto Alegre
+                </span>
+              </div>
+            </div>
+
+            <div>
+             <img class="h-[400px]" src="assets/images/image-2.jpeg" alt="">
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section
+        id="faq"
+        class="w-full px-8 mx-auto max-w-7xl mt-20w-full px-8 mx-auto max-w-7xl p-32"
+      >
+        <span class="font-bold text-[#809fcb]">FAQ &mdash;</span>
+        <h2 class="text-3xl font-bold text-[#003f97] mb-8">Perguntas frequentes.</h2>
+
+        <div class="faq-container flex flex-col gap-4">
+          <!-- FAQ 1 -->
+          <div
+            class="item p-6 shadow-[0_0_3.2rem_-15px_rgba(0,0,0,0.2)] grid items-center grid-cols-[40px_1fr_40px] gap-x-6 gap-y-6 transition-all duration-150 ease-in"
+          >
+            <p class="inline-block text-xl font-bold text-[#809fcb]">#1</p>
+            <p class="text-xl text-[#003f97] font-bold">Quais os alimentos que podem ser doados?</p>
+            <ion-icon
+              class="w-[32px] h-[32px] stroke-[#003f97]"
+              name="chevron-down-outline"
+            ></ion-icon>
+
+            <div class="hidden-box">
+              <p class="text-lg text-[#444] mb-4">
+                Alimentos não perecíveis, como arroz, feijão, óleo, farinha e macarrão (exceto sal).
+              </p>
+            </div>
+          </div>
+          <!-- FAQ 2 -->
+          <div
+            class="item p-6 shadow-[0_0_3.2rem_-15px_rgba(0,0,0,0.2)] grid items-center grid-cols-[40px_1fr_40px] gap-x-6 gap-y-6 transition-all duration-150 ease-in"
+          >
+            <p class="inline-block text-xl font-bold text-[#809fcb]">#2</p>
+            <p class="text-xl text-[#003f97] font-bold">Quais são os locais de doação?</p>
+            <ion-icon
+              class="w-[32px] h-[32px] stroke-[#003f97]"
+              name="chevron-down-outline"
+            ></ion-icon>
+
+            <div class="hidden-box">
+              <p class="text-lg text-[#444] mb-4">
+                As doações podem ser entregues na sala de Coordenação de TI da unidade Senac Campus
+                I, no corredor ao lado da cantina.
+              </p>
+            </div>
+          </div>
+          <!-- FAQ 3 -->
+          <div
+            class="item p-6 shadow-[0_0_3.2rem_-15px_rgba(0,0,0,0.2)] grid items-center grid-cols-[40px_1fr_40px] gap-x-6 gap-y-6 transition-all duration-150 ease-in"
+          >
+            <p class="inline-block text-xl font-bold text-[#809fcb]">#3</p>
+            <p class="text-xl text-[#003f97] font-bold">Quando se encerram as doações?</p>
+            <ion-icon
+              class="w-[32px] h-[32px] stroke-[#003f97]"
+              name="chevron-down-outline"
+            ></ion-icon>
+
+            <div class="hidden-box">
+              <p class="text-lg text-[#444] mb-4">As doações se encerram no dia 16/06.</p>
+            </div>
+          </div>
+        </div>
+      </section>
+    </main>
+
+    <footer class="bg-[#001952] p-20">
+      <div class="flex flex-col gap-10 lg:flex-row lg:items-center lg:justify-between">
+        <div>
+          <h2 class="text-4xl text-[#fddd00] font-bold mb-8">Senac POA</h2>
+
+          <ul class="flex gap-4 mb-4">
+            <li>
+              <a
+                class="text-2xl text-neutral-50 hover:text-[#334775] ease-in-out duration-300 hover:text-[#334775] ease-in-out duration-300 hover:text-[#334775] ease-in-out duration-300 hover:text-[#334775] ease-in-out duration-300"
+                href=""
+                ><ion-icon name="logo-facebook"></ion-icon
+              ></a>
+            </li>
+            <li>
+              <a
+                class="text-2xl text-neutral-50 hover:text-[#334775] ease-in-out duration-300 hover:text-[#334775] ease-in-out duration-300 hover:text-[#334775] ease-in-out duration-300 hover:text-[#334775] ease-in-out duration-300"
+                href=""
+                ><ion-icon name="logo-whatsapp"></ion-icon
+              ></a>
+            </li>
+            <li>
+              <a
+                class="text-2xl text-neutral-50 hover:text-[#334775] ease-in-out duration-300 hover:text-[#334775] ease-in-out duration-300 hover:text-[#334775] ease-in-out duration-300 hover:text-[#334775] ease-in-out duration-300"
+                href=""
+                ><ion-icon name="logo-linkedin"></ion-icon
+              ></a>
+            </li>
+          </ul>
+
+          <p class="text-base text-neutral-50">
+            Copyright © 2022 by BalleBot. All rights reserved.
+          </p>
+        </div>
+
+        <div>
+          <ul class="flex flex-col md:flex-row lg:flex-row gap-4 mb-4">
+            <li>
+              <a
+                class="text-xl text-neutral-50 hover:text-[#334775] ease-in-out duration-300"
+                href=""
+                >Termos e Privacidade</a
+              >
+            </li>
+            <li>
+              <a
+                class="text-xl text-neutral-50 hover:text-[#334775] ease-in-out duration-300"
+                href=""
+                >Suporte</a
+              >
+            </li>
+            <li>
+              <a
+                class="text-xl text-neutral-50 hover:text-[#334775] ease-in-out duration-300"
+                href=""
+                >Sobre</a
+              >
+            </li>
+            <li>
+              <a
+                class="text-xl text-neutral-50 hover:text-[#334775] ease-in-out duration-300"
+                href=""
+                >Faq</a
+              >
+            </li>
+          </ul>
+        </div>
+      </div>
+    </footer>
+
+    <!-- Custom Script -->
+    <script src="https://unpkg.com/scrollreveal"></script>
+    <script src="assets/js/script.js"></script>
+  </body>
+</html>
