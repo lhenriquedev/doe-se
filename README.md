@@ -5,7 +5,7 @@
 <h1 align="center">Doar faz bem</h1>
 
 <p align="center">
-Este projeto nasceu junto a proposta da disciplina Gestão Ágil de Projetos da Faculdade Senac Porto Alegre, um projeto que vai além da sala de aula.
+Foi feito uma landing page para arrecadar alimentos na cidade de Porto Alegre.
 </p>
 <br/>
 
