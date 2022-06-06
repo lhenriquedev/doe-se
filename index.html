@@ -6,8 +6,17 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Doar faz bem</title>
 
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;700;900&display=swap"
+      rel="stylesheet"
+    />
+
+    <link rel="stylesheet" href="assets/css/main.css" />
+
     <!-- CDN Tailwind -->
-    <script src="https://cdn.tailwindcss.com"></script>
+    <script defer src="https://cdn.tailwindcss.com"></script>
     <!-- ionic icons -->
     <script
       defer
@@ -19,20 +28,6 @@
       nomodule
       src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.js"
     ></script>
-
-    <style>
-      .hidden-box {
-        grid-column: 2;
-        display: none;
-      }
-
-      .open {
-        border-top: 4px solid #fddd00;
-      }
-      .open .hidden-box {
-        display: block;
-      }
-    </style>
   </head>
   <body>
     <header id="header" class="w-full h-20 bg-[#fddd00]">
@@ -164,7 +159,9 @@
             <h1 class="text-5xl lg:text-7xl font-bold uppercase text-[#003b9e] leading-tight mb-4">
               Doar <span class="text-[#001952]">faz</span> bem!
             </h1>
-            <p class="text-lg text-[#444444] font-medium mb-8 text-justify">
+            <p
+              class="leading-relaxed text-[16px] lg:text-[18px] text-[#444444] font-medium mb-8 text-justify"
+            >
               Este projeto nasceu junto a proposta da disciplina Gestão Ágil de Projetos da
               Faculdade Senac RS, um projeto que vai além da sala de aula onde estamos arrecadando
               alimentos para instituição “Clinica Esperança de Amparo a Criança.
@@ -185,10 +182,10 @@
 
       <section id="partners" class="w-full pt-16 pb-16 lg:pt-32 lg:pb-32 border-b-[1px]">
         <div class="px-8 mx-auto max-w-7xl">
-          <span class="subheadline text-base text-[#809fcb] font-bold uppercase"
+          <span class="subheadline text-xs lg:text-base text-[#809fcb] font-bold uppercase"
             >Parceiros &mdash;</span
           >
-          <h2 class="title text-3xl font-bold text-[#003f97] mb-8">
+          <h2 class="title text-2xl lg:text-3xl font-bold text-[#003f97] mb-8">
             Temos uma parceria incrível com esses times:
           </h2>
           <div class="overflow-hidden grid grid-cols-2 gap-10 md:grid-cols-3 lg:grid-cols-4 mt-20">
@@ -218,13 +215,13 @@
 
       <section id="about" class="w-full pt-16 pb-16 lg:pt-32 lg:pb-32 border-b-[1px]">
         <div class="px-8 mx-auto max-w-7xl">
-          <span class="text-base text-[#809fcb] font-bold uppercase">Sobre &mdash;</span>
-          <h2 id="title" class="text-3xl font-bold text-[#003f97] mb-8">
+          <span class="text-xs lg:text-base text-[#809fcb] font-bold uppercase">Sobre &mdash;</span>
+          <h2 id="title" class="text-2xl lg:text-3xl font-bold text-[#003f97] mb-8">
             Somos uma equipe com pessoas talentosas
           </h2>
           <div class="flex lg:flex-row flex-col lg:gap-24 sm:gap-10 gap-12">
             <div class="w-full lg:w-6/12">
-              <p class="text-base lg:text-xl text-[#444] text-justify">
+              <p class="leading-relaxed lg:text-[18px] text-[#444] text-justify">
                 Este projeto nasceu junto a proposta da disciplina Gestão Ágil de Projetos da
                 Faculdade Senac RS, um projeto que vai além da sala de aula onde estamos arrecadando
                 alimentos para instituição “Clinica Esperança de Amparo a Criança.
@@ -253,12 +250,16 @@
 
       <section id="forWhom" class="pt-16 pb-16 lg:pt-32 lg:pb-32 bg-[#fddd00]">
         <div class="px-8 mx-auto max-w-7xl">
-          <span class="text-base text-[#809fcb] font-bold uppercase">Para quem &mdash;</span>
-          <h2 id="title" class="text-3xl font-bold text-[#003f97] mb-8">Quem receberá a doação?</h2>
+          <span class="text-xs lg:text-base text-[#809fcb] font-bold uppercase"
+            >Para quem &mdash;</span
+          >
+          <h2 id="title" class="text-2xl lg:text-3x font-bold text-[#003f97] mb-8">
+            Quem receberá a doação?
+          </h2>
 
           <div class="flex flex-col gap-[48px] lg:flex-row justify-between items-center">
             <div class="max-w-[600px]">
-              <p class="text-base lg:text-xl text-[#444] text-justify">
+              <p class="leading-relaxed text-[16px] lg:text-[18px] text-[#444] text-justify">
                 A
                 <span class="text-[#003f97] font-bold"
                   >CEACRI Clínica Esperança de Amparo à Criança</span
@@ -278,15 +279,19 @@
 
       <section id="points" class="w-full pt-16 pb-16 lg:pt-32 lg:pb-32 border-b-[1px]">
         <div class="px-8 mx-auto max-w-7xl">
-          <span class="text-base text-[#809fcb] font-bold uppercase">Onde doar &mdash;</span>
-          <h2 id="title" class="text-3xl font-bold text-[#003f97] mb-8">Pontos de coleta</h2>
+          <span class="text-xs lg:text-base text-[#809fcb] font-bold uppercase"
+            >Onde doar &mdash;</span
+          >
+          <h2 id="title" class="text-2xl lg:text-3xl font-bold text-[#003f97] mb-8">
+            Pontos de coleta
+          </h2>
 
           <div class="flex flex-col lg:flex-row justify-between">
             <div class="lg:max-w-[600px]">
               <div class="mb-8">
                 <h3 class="flex items-center gap-[16px] font-bold text-[#003f97] text-xl mb-4">
                   <ion-icon class="w-[30px] h-[30px]" name="navigate-outline"></ion-icon>
-                  <span
+                  <span class="text-base"
                     >Faculdade Senac Porto Alegre (Campus I) - <br />
                     Coordenação de TI</span
                   >
@@ -318,8 +323,8 @@
         id="faq"
         class="w-full px-8 mx-auto max-w-7xl mt-20w-full px-8 mx-auto max-w-7xl p-16 lg:p-32"
       >
-        <span class="font-bold text-[#809fcb]">FAQ &mdash;</span>
-        <h2 class="text-3xl font-bold text-[#003f97] mb-8">Perguntas frequentes.</h2>
+        <span class="text-xs lg:text-base font-bold text-[#809fcb]">FAQ &mdash;</span>
+        <h2 class="text-2xl lg:text-3xl font-bold text-[#003f97] mb-8">Perguntas frequentes.</h2>
 
         <div class="faq-container flex flex-col gap-4">
           <!-- FAQ 1 -->
