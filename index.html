@@ -28,6 +28,10 @@
       nomodule
       src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.js"
     ></script>
+
+    <!-- Custom Script -->
+    <script defer src="https://unpkg.com/scrollreveal@4.0.0/dist/scrollreveal.min.js"></script>
+    <script defer src="assets/js/script.js"></script>
   </head>
   <body>
     <header id="header" class="w-full h-20 bg-[#fddd00]">
@@ -131,19 +135,22 @@
     </header>
 
     <main>
-      <section id="hero" class="w-full h-[950px] lg:h-[1100px] lg:h-[700px] bg-[#fddd00]">
+      <section id="hero" class="w-full lg:pt-[48px] lg:pb-[96px] bg-[#fddd00]">
         <div
-          class="flex flex-col gap-12 lg:gap-24 items-center justify-between lg:flex-row pt-10 lg:pt-20 max-w-7xl px-8 mx-auto"
+          class="flex flex-col gap-12 lg:gap-24 items-center justify-between lg:flex-row pt-10 max-w-7xl px-8 mx-auto"
         >
-          <div class="flex flex-col">
-            <span class="self-start inline-block p-2 bg-[#1877b1] text-white font-bold rounded mb-4"
+          <div class="flex flex-col max-w-[600px]">
+            <span
+              class="subtitle self-start inline-block p-2 bg-[#1877b1] text-white font-bold rounded mb-4"
               >Campanha solidária</span
             >
-            <h1 class="text-5xl lg:text-7xl font-bold uppercase text-[#003b9e] leading-tight mb-4">
+            <h1
+              class="title text-5xl lg:text-7xl font-bold uppercase text-[#003b9e] leading-tight mb-4"
+            >
               Doar <span class="text-[#001952]">faz</span> bem!
             </h1>
             <p
-              class="leading-relaxed text-[16px] lg:text-[18px] text-[#444444] font-medium mb-8 text-justify"
+              class="subtitle leading-relaxed text-[16px] lg:text-[18px] text-[#444444] font-medium mb-8 text-justify"
             >
               Venha fazer parte dessa campanha em prol das crianças da CEACRI (Clínica Esperança de
               Amparo à Criança). O nosso objetivo é arrecadar o maior número de alimentos possíveis,
@@ -152,21 +159,21 @@
             </p>
 
             <a
-              class="py-2 bg-[#016908] w-[200px] rounded-3xl text-center text-white text-lg font-bold hover:bg-[#348739] ease-in-out duration-300"
+              class="button py-2 bg-[#016908] w-[200px] rounded-3xl text-center text-white text-lg font-bold hover:bg-[#348739] ease-in-out duration-300"
               href="https://www.senacrs.com.br/"
               target="_blank"
               >Saiba mais</a
             >
           </div>
-          <div class="w-full">
-            <img class="max-w-full" src="assets/images/hero-removebg.png" alt="" />
+          <div class="">
+            <img class="image w-full" src="assets/images/hero-removebg.png" alt="" />
           </div>
         </div>
       </section>
 
       <section id="partners" class="w-full pt-16 pb-16 lg:pt-32 lg:pb-32 border-b-[1px]">
         <div class="px-8 mx-auto max-w-7xl">
-          <span class="subheadline text-xs lg:text-base text-[#809fcb] font-bold uppercase"
+          <span class="subtitle text-xs lg:text-base text-[#809fcb] font-bold uppercase"
             >Parceiros &mdash;</span
           >
           <h2 class="title text-2xl lg:text-3xl font-bold text-[#003f97] mb-8">
@@ -199,30 +206,32 @@
 
       <section id="about" class="w-full pt-16 pb-16 lg:pt-32 lg:pb-32 border-b-[1px]">
         <div class="px-8 mx-auto max-w-7xl">
-          <span class="text-xs lg:text-base text-[#809fcb] font-bold uppercase">Sobre &mdash;</span>
-          <h2 id="title" class="text-2xl lg:text-3xl font-bold text-[#003f97] mb-8">
+          <span class="subtitle text-xs lg:text-base text-[#809fcb] font-bold uppercase"
+            >Sobre &mdash;</span
+          >
+          <h2 class="title text-2xl lg:text-3xl font-bold text-[#003f97] mb-8">
             Somos uma equipe com pessoas talentosas
           </h2>
-          <div class="flex lg:flex-row flex-col lg:gap-24 sm:gap-10 gap-12">
+          <div class="flex lg:flex-row flex-col lg:gap-32 sm:gap-10 gap-12">
             <div class="w-full lg:w-6/12">
-              <p class="leading-relaxed lg:text-[18px] text-[#444] text-justify">
+              <p class="paragraph leading-relaxed lg:text-[18px] text-[#444] text-justify">
                 Este projeto nasceu junto a proposta da disciplina Gestão Ágil de Projetos da
                 Faculdade Senac Porto Alegre, um projeto que vai além da sala de aula.
               </p>
             </div>
             <div class="w-full lg:w-6/12">
               <img
-                class="lg:block hidden w-full"
+                class="image lg:block hidden w-full"
                 src="https://i.ibb.co/RjNH7QB/Rectangle-122-1.png"
                 alt="people discussing on board"
               />
               <img
-                class="lg:hidden sm:block hidden w-full"
+                class="image lg:hidden sm:block hidden w-full"
                 src="https://i.ibb.co/16fPqrg/Rectangle-122-2.png"
                 alt="people discussing on board"
               />
               <img
-                class="sm:hidden block w-full"
+                class="image sm:hidden block w-full"
                 src="https://i.ibb.co/Jxhpxh6/Rectangle-122.png"
                 alt="people discussing on board"
               />
@@ -233,16 +242,18 @@
 
       <section id="forWhom" class="pt-16 pb-16 lg:pt-32 lg:pb-32 bg-[#fddd00]">
         <div class="px-8 mx-auto max-w-7xl">
-          <span class="text-xs lg:text-base text-[#809fcb] font-bold uppercase"
+          <span class="subtitle text-xs lg:text-base text-[#809fcb] font-bold uppercase"
             >Para quem &mdash;</span
           >
-          <h2 id="title" class="text-2xl lg:text-3x font-bold text-[#003f97] mb-8">
+          <h2 class="title text-2xl lg:text-3x font-bold text-[#003f97] mb-8">
             Quem receberá a doação?
           </h2>
 
           <div class="flex flex-col gap-[48px] lg:flex-row justify-between items-center">
             <div class="max-w-[600px]">
-              <p class="leading-relaxed text-[16px] lg:text-[18px] text-[#444] text-justify">
+              <p
+                class="paragraph leading-relaxed text-[16px] lg:text-[18px] text-[#444] text-justify"
+              >
                 A
                 <span class="text-[#003f97] font-bold"
                   >CEACRI Clínica Esperança de Amparo à Criança</span
@@ -255,23 +266,21 @@
                 social".
               </p>
             </div>
-            <img class="lg:w-[30%] w-[80%] mb-8" src="assets/images/ceacri.png" alt="" />
+            <img class="image lg:w-[30%] w-[80%] mb-8" src="assets/images/ceacri.png" alt="" />
           </div>
         </div>
       </section>
 
       <section id="points" class="w-full pt-16 pb-16 lg:pt-32 lg:pb-32 border-b-[1px]">
         <div class="px-8 mx-auto max-w-7xl">
-          <span class="text-xs lg:text-base text-[#809fcb] font-bold uppercase"
+          <span class="subtitle text-xs lg:text-base text-[#809fcb] font-bold uppercase"
             >Onde doar &mdash;</span
           >
-          <h2 id="title" class="text-2xl lg:text-3xl font-bold text-[#003f97] mb-8">
-            Pontos de coleta
-          </h2>
+          <h2 class="title text-2xl lg:text-3xl font-bold text-[#003f97] mb-8">Pontos de coleta</h2>
 
           <div class="flex flex-col lg:flex-row justify-between">
             <div class="lg:max-w-[600px]">
-              <div class="mb-8">
+              <div class="subtitle mb-8">
                 <h3 class="flex items-center gap-[16px] font-bold text-[#003f97] text-xl mb-4">
                   <ion-icon class="w-[30px] h-[30px]" name="navigate-outline"></ion-icon>
                   <span class="text-base"
@@ -284,7 +293,7 @@
                 </span>
               </div>
 
-              <div class="mb-10">
+              <div class="subtitle mb-10">
                 <h3 class="flex items-center gap-[16px] font-bold text-[#003f97] text-xl mb-4">
                   <ion-icon class="w-[30px] h-[30px]" name="navigate-outline"></ion-icon>
                   <span class="text-base">Zensul Porto Alegre</span>
@@ -296,7 +305,7 @@
             </div>
 
             <div>
-              <img class="h-[400px]" src="assets/images/image-2.jpeg" alt="" />
+              <img class="image h-[400px]" src="assets/images/image-2.jpeg" alt="" />
             </div>
           </div>
         </div>
@@ -306,8 +315,10 @@
         id="faq"
         class="w-full px-8 mx-auto max-w-7xl mt-20w-full px-8 mx-auto max-w-7xl p-16 lg:p-32"
       >
-        <span class="text-xs lg:text-base font-bold text-[#809fcb]">FAQ &mdash;</span>
-        <h2 class="text-2xl lg:text-3xl font-bold text-[#003f97] mb-8">Perguntas frequentes.</h2>
+        <span class="subtitle text-xs lg:text-base font-bold text-[#809fcb]">FAQ &mdash;</span>
+        <h2 class="title text-2xl lg:text-3xl font-bold text-[#003f97] mb-8">
+          Perguntas frequentes.
+        </h2>
 
         <div class="faq-container flex flex-col gap-4">
           <!-- FAQ 1 -->
@@ -362,6 +373,26 @@
               </p>
             </div>
           </div>
+          <!-- FAQ 4 -->
+          <div
+            id="contact"
+            class="item p-3 lg:p-6 shadow-[0_0_3.2rem_-15px_rgba(0,0,0,0.2)] grid items-center grid-cols-[40px_1fr_40px] gap-x-6 gap-y-6 transition-all duration-150 ease-in"
+          >
+            <p class="inline-block text-xl font-bold text-[#809fcb]">#4</p>
+            <p class="text-lg text-[#003f97] font-bold">Quero saber mais sobre a campanha</p>
+            <ion-icon
+              class="w-[32px] h-[32px] stroke-[#003f97]"
+              name="chevron-down-outline"
+            ></ion-icon>
+
+            <div class="hidden-box">
+              <p class="text-base lg:text-lg text-[#444] mb-4">
+                Para saber mais sobre a campanha, entre em contato com o nosso time no telefone
+                <br />
+                <span class="font-bold">(51) 999536795 (Lucas) ou (51) 98573-9753 (Marcél) </span>.
+              </p>
+            </div>
+          </div>
         </div>
       </section>
     </main>
@@ -375,21 +406,21 @@
             <li>
               <a
                 class="text-2xl text-neutral-50 hover:text-[#334775] ease-in-out duration-300 hover:text-[#334775] ease-in-out duration-300 hover:text-[#334775] ease-in-out duration-300 hover:text-[#334775] ease-in-out duration-300"
-                href=""
+                href="#"
                 ><ion-icon name="logo-facebook"></ion-icon
               ></a>
             </li>
             <li>
               <a
                 class="text-2xl text-neutral-50 hover:text-[#334775] ease-in-out duration-300 hover:text-[#334775] ease-in-out duration-300 hover:text-[#334775] ease-in-out duration-300 hover:text-[#334775] ease-in-out duration-300"
-                href=""
+                href="#"
                 ><ion-icon name="logo-whatsapp"></ion-icon
               ></a>
             </li>
             <li>
               <a
                 class="text-2xl text-neutral-50 hover:text-[#334775] ease-in-out duration-300 hover:text-[#334775] ease-in-out duration-300 hover:text-[#334775] ease-in-out duration-300 hover:text-[#334775] ease-in-out duration-300"
-                href=""
+                href="#"
                 ><ion-icon name="logo-linkedin"></ion-icon
               ></a>
             </li>
@@ -405,28 +436,28 @@
             <li>
               <a
                 class="text-xl text-neutral-50 hover:text-[#334775] ease-in-out duration-300"
-                href=""
+                href="#"
                 >Termos e Privacidade</a
               >
             </li>
             <li>
               <a
                 class="text-xl text-neutral-50 hover:text-[#334775] ease-in-out duration-300"
-                href=""
+                href="#"
                 >Suporte</a
               >
             </li>
             <li>
               <a
                 class="text-xl text-neutral-50 hover:text-[#334775] ease-in-out duration-300"
-                href=""
+                href="#"
                 >Sobre</a
               >
             </li>
             <li>
               <a
                 class="text-xl text-neutral-50 hover:text-[#334775] ease-in-out duration-300"
-                href=""
+                href="#"
                 >Faq</a
               >
             </li>
@@ -434,9 +465,5 @@
         </div>
       </div>
     </footer>
-
-    <!-- Custom Script -->
-    <script src="https://unpkg.com/scrollreveal"></script>
-    <script src="assets/js/script.js"></script>
   </body>
 </html>
